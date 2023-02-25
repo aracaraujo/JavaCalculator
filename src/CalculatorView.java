@@ -209,7 +209,15 @@ public class CalculatorView extends JFrame implements ActionListener{
         } else if (e.getSource()==percentageButton){
             System.out.println("Percentage button");
         } else if (e.getSource()==negativePositiveButton){
-            System.out.println("Negative/positive button");
+            if (Objects.equals(this.numberField.getText(), "") || Objects.equals(this.numberField.getText(), "0")){
+                System.out.println("numberField is empty or is 0");
+            }else {
+                if (this.numberField.getText().charAt(0) == '-') {
+                    this.numberField.setText(this.numberField.getText().substring(1));
+                } else {
+                    this.numberField.setText("-" + this.numberField.getText());
+                }
+            }
         } else if(e.getSource()==cleanButton){
             this.numberField.setText("");
         } else if(e.getSource()==button7){

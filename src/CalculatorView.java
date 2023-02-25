@@ -207,7 +207,9 @@ public class CalculatorView extends JFrame implements ActionListener{
         } else if (e.getSource()==equalButton){
             System.out.println("Equal button");
         } else if (e.getSource()==percentageButton){
-            System.out.println("Percentage button");
+            float number = Float.parseFloat(this.numberField.getText());
+            float ans  = number/100;
+            this.numberField.setText(String.valueOf(ans));
         } else if (e.getSource()==negativePositiveButton){
             if (Objects.equals(this.numberField.getText(), "") || Objects.equals(this.numberField.getText(), "0")){
                 System.out.println("numberField is empty or is 0");

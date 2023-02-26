@@ -221,6 +221,7 @@ public class CalculatorView extends JFrame implements ActionListener{
             this.secondNumber = Float.parseFloat(this.numberField.getText());
             float ans = calculator.operation(this.operation,this.firstNumber,this.secondNumber);
             this.numberField.setText(String.valueOf(ans));
+            this.inOperation = false;
         } else if (e.getSource()==percentageButton){
             float number = Float.parseFloat(this.numberField.getText());
             float ans  = number/100;
@@ -237,50 +238,62 @@ public class CalculatorView extends JFrame implements ActionListener{
             }
         } else if(e.getSource()==cleanButton){
             this.numberField.setText("");
+            this.inOperation = false;
         } else if(e.getSource()==button7){
             if ((Objects.equals(this.numberField.getText(), "0") || this.inOperation)){
                 this.numberField.setText("");}
             this.numberField.setText(this.numberField.getText()+"7");
+            this.inOperation = false;
         } else if(e.getSource()==button8){
                 if ((Objects.equals(this.numberField.getText(), "0") || this.inOperation)){
                     this.numberField.setText("");}
                 this.numberField.setText(this.numberField.getText()+"8");
+                this.inOperation = false;
         } else if(e.getSource()==button9){
             if ((Objects.equals(this.numberField.getText(), "0")) || this.inOperation){
                 this.numberField.setText("");}
             this.numberField.setText(this.numberField.getText()+"9");
+            this.inOperation = false;
         } else if(e.getSource()==button4){
-            if (Objects.equals(this.numberField.getText(), "0")){
+            if ((Objects.equals(this.numberField.getText(), "0")) || this.inOperation){
                 this.numberField.setText("");}
             this.numberField.setText(this.numberField.getText()+"4");
+            this.inOperation = false;
         } else if(e.getSource()==button5){
-            if (Objects.equals(this.numberField.getText(), "0")){
+            if ((Objects.equals(this.numberField.getText(), "0")) || this.inOperation){
                 this.numberField.setText("");}
             this.numberField.setText(this.numberField.getText()+"5");
+            this.inOperation = false;
         } else if(e.getSource()==button6){
-            if (Objects.equals(this.numberField.getText(), "0")){
+            if ((Objects.equals(this.numberField.getText(), "0")) || this.inOperation){
                 this.numberField.setText("");}
             this.numberField.setText(this.numberField.getText()+"6");
+            this.inOperation = false;
         } else if(e.getSource()==button1){
-            if (Objects.equals(this.numberField.getText(), "0")){
+            if ((Objects.equals(this.numberField.getText(), "0")) || this.inOperation){
                 this.numberField.setText("");}
             this.numberField.setText(this.numberField.getText()+"1");
+            this.inOperation = false;
         } else if(e.getSource()==button2){
-            if (Objects.equals(this.numberField.getText(), "0")){
+            if ((Objects.equals(this.numberField.getText(), "0")) || this.inOperation){
                 this.numberField.setText("");}
             this.numberField.setText(this.numberField.getText()+"2");
+            this.inOperation = false;
         } else if(e.getSource()==button3){
-            if (Objects.equals(this.numberField.getText(), "0")){
+            if ((Objects.equals(this.numberField.getText(), "0")) || this.inOperation){
                 this.numberField.setText("");}
             this.numberField.setText(this.numberField.getText()+"3");
+            this.inOperation = false;
         } else if(e.getSource()==button0){
-            if (Objects.equals(this.numberField.getText(), "0")){
+            if ((Objects.equals(this.numberField.getText(), "0")) || this.inOperation){
                 this.numberField.setText("");}
             this.numberField.setText(this.numberField.getText()+"0");
+            this.inOperation = false;
         } else if(e.getSource()==buttonPeriod){
-            if (Objects.equals(this.numberField.getText(), "0")){
+            if ((Objects.equals(this.numberField.getText(), "0")) || this.inOperation){
                 this.numberField.setText("");}
             this.numberField.setText(this.numberField.getText()+".");
+            this.inOperation = false;
         }
     }
 }

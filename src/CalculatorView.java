@@ -6,6 +6,10 @@ import java.util.Objects;
 
 public class CalculatorView extends JFrame implements ActionListener{
 
+    Calculator calculator = new Calculator();
+    float firstNumber;
+    float secondNumber;
+    String operation;
     JButton plusButton;
     JButton minusButton;
     JButton multiplicationButton;
@@ -27,6 +31,7 @@ public class CalculatorView extends JFrame implements ActionListener{
     JButton buttonPeriod;
     JTextField numberField;
     Font font1 = new Font("SansSerif", Font.BOLD, 40);
+    boolean inOperation;
 
     public CalculatorView(){
 
@@ -197,15 +202,25 @@ public class CalculatorView extends JFrame implements ActionListener{
     @Override
     public void actionPerformed(ActionEvent e) {
         if (e.getSource()==plusButton){
-            System.out.println("Adding button");
+            this.firstNumber = Float.parseFloat(this.numberField.getText());
+            this.operation = "Addition";
+            this.inOperation = true;
         } else if (e.getSource()==minusButton){
-            System.out.println("Minus button");
+            this.firstNumber = Float.parseFloat(this.numberField.getText());
+            this.operation = "Subtraction";
+            this.inOperation = true;
         } else if (e.getSource()==multiplicationButton){
-            System.out.println("Multiplication button");
+            this.firstNumber = Float.parseFloat(this.numberField.getText());
+            this.operation = "Multiplication";
+            this.inOperation = true;
         } else if (e.getSource()==divisionButton){
-            System.out.println("Division button");
+            this.firstNumber = Float.parseFloat(this.numberField.getText());
+            this.operation = "Division";
+            this.inOperation = true;
         } else if (e.getSource()==equalButton){
-            System.out.println("Equal button");
+            this.secondNumber = Float.parseFloat(this.numberField.getText());
+            float ans = calculator.operation(this.operation,this.firstNumber,this.secondNumber);
+            this.numberField.setText(String.valueOf(ans));
         } else if (e.getSource()==percentageButton){
             float number = Float.parseFloat(this.numberField.getText());
             float ans  = number/100;
@@ -223,15 +238,15 @@ public class CalculatorView extends JFrame implements ActionListener{
         } else if(e.getSource()==cleanButton){
             this.numberField.setText("");
         } else if(e.getSource()==button7){
-            if (Objects.equals(this.numberField.getText(), "0")){
+            if ((Objects.equals(this.numberField.getText(), "0") || this.inOperation)){
                 this.numberField.setText("");}
             this.numberField.setText(this.numberField.getText()+"7");
         } else if(e.getSource()==button8){
-                if (Objects.equals(this.numberField.getText(), "0")){
+                if ((Objects.equals(this.numberField.getText(), "0") || this.inOperation)){
                     this.numberField.setText("");}
                 this.numberField.setText(this.numberField.getText()+"8");
         } else if(e.getSource()==button9){
-            if (Objects.equals(this.numberField.getText(), "0")){
+            if ((Objects.equals(this.numberField.getText(), "0")) || this.inOperation){
                 this.numberField.setText("");}
             this.numberField.setText(this.numberField.getText()+"9");
         } else if(e.getSource()==button4){

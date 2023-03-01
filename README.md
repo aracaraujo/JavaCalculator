@@ -14,18 +14,13 @@ and division.
 
 I'm writing this calculator in Java using IntelliJ IDEA as my IDEA.
 
-The GUI that I'm using is Swing. This is my first time programming in Swing and I'm enjoying a lot. I know that is a
+The GUI that I'm using is Swing. This is my first time programming in Swing, and I'm enjoying a lot. I know that is a
 simple GUI, but it was easy to learn and I enjoyed a lot.
 
 # Status
 
-The program isn't finished yet. The four basic operations are working already, but there's some logic regarding the
-track of results when performing operations after operations that still needs to be fixed.
-
-# Future Steps
-
-I'm not sure yet if I will add anything else besides finalizing some logic. The purpose was creating a basic calculator
-to practice more of my Java skills and learn about Swing and after finalizing the logic it will be pretty more done.
+The calculator is done. It will only perform one operation at a time, so if you're trying to run don't try to add
+severa number in a row. Add two at each time. 
 
 [//]: # (# Useful Websites)
 

@@ -6,27 +6,20 @@ program to practice my Java skills. The interface is built in Swing.
 The software is a basic calculator that performs the four basics operation addition, subtraction, multiplication,
 and division.
 
-[//]: # ({Provide a link to your YouTube demonstration.  It should be a one minute demo of the software running and a walkthrough of the code.})
+The link bellow is a demo video of the calculator running.
 
-[//]: # ([Software Demo Video]&#40;http://youtube.link.goes.here&#41;)
+[Software Demo Video](https://www.youtube.com/watch?v=HJX0GqYvbAg)
 
 # Development Environment
 
 I'm writing this calculator in Java using IntelliJ IDEA as my IDEA.
 
-The GUI that I'm using is Swing. This is my first time programming in Swing, and I'm enjoying a lot. I know that is a
-simple GUI, but it was easy to learn and I enjoyed a lot.
+The GUI that I'm using is Swing. This is my first time programming in Swing, and I enjoyed a lot.
 
-# Status
+# Useful Websites
 
-The calculator is done. It will only perform one operation at a time, so if you're trying to run don't try to add
-severa number in a row. Add two at each time. 
+Here are some links that helped me to learn swing and helped me to build this application.
 
-[//]: # (# Useful Websites)
+* [Java GUI: Full Course](https://www.youtube.com/watch?v=Kmgo00avvEw&t=7005s)
 
-[//]: # ()
-[//]: # ({Make a list of websites that you found helpful in this project})
-
-[//]: # (* [Web Site Name]&#40;http://url.link.goes.here&#41;)
-
-[//]: # (* [Web Site Name]&#40;http://url.link.goes.here&#41;)
+* [Java Swing Tutorial](https://www.javatpoint.com/java-swing)
